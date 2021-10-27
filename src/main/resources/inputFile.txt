@@ -1,0 +1,146 @@
+11.1 Intelligence and Machines
+The field of artificial intelligence is quite large and merges with other subjects
+such as psychology, neurology, mathematics, linguistics, and electrical and
+mechanical engineering. To focus our thoughts, then, we begin by considering
+the concept of an agent and the types of intelligent behavior that an agent might
+exhibit. Indeed, much of the research in artificial intelligence can be categorized
+in terms of an agent’s behavior.
+Intelligent Agents
+An agent is a “device” that responds to stimuli from its environment. It is natural
+to envision an agent as an individual machine such as a robot, although an
+agent may take other forms such as an autonomous airplane, a character in an
+interactive video game, or a process communicating with other processes over
+the Internet (perhaps as a client, a server, or a peer). Most agents have sensors by
+which they receive data from their environments and actuators by which they can
+affect their environments. Examples of sensors include microphones, cameras,
+range sensors, and air or soil sampling devices. Examples of actuators include
+wheels, legs, wings, grippers, and speech synthesizers.
+Much of the research in artificial intelligence can be characterized in the
+context of building agents that behave intelligently, meaning that the actions of
+the agent’s actuators must be rational responses to the data received though its
+sensors. In turn, we can classify this research by considering different levels of
+these responses.
+The simplest response is a reflex action, which is merely a predetermined
+response to the input data. Higher levels of response are required to obtain more
+“intelligent” behavior. For example, we might empower an agent with knowledge
+of its environment and require that the agent adjust its actions accordingly. The
+process of throwing a baseball is largely a reflex action but determining how and
+where to throw the ball requires knowledge of the current environment. (There is
+one out with runners on first and third.) How such real-world knowledge can be
+stored, updated, accessed, and ultimately applied in the decision-making process
+continues to be a challenging problem in artificial intelligence.
+Another level of response is required if we want the agent to seek a goal such
+as winning a game of chess or maneuvering through a crowded passageway.
+Such goal-directed behavior requires that the agent’s response, or sequence of
+responses, be the result of deliberately forming a plan of action or selecting the
+best action among the current options.
+In some cases an agent’s responses improve over time as the agent learns.
+This could take the form of developing procedural knowledge (learning “how”)
+or storing declarative knowledge (learning “what”). Learning procedural
+knowledge usually involves a trial-and-error process by which an agent learns
+appropriate actions by being punished for poor actions and rewarded for good
+ones. Following this approach, agents have been developed that, over time,
+improve their abilities in competitive games such as checkers and chess. Learning
+declarative knowledge usually takes the form of expanding or altering the “facts”
+in an agent’s store of knowledge. For example, a baseball player must repeatedly
+adjust his or her database of knowledge (there is still just one out, but now runners are
+on first and second) from which rational responses to future events are
+determined.
+To produce rational responses to stimuli, an agent must “understand” the
+stimuli received by its sensors. That is, an agent must be able to extract information
+ from the data produced by its sensors, or in other words, an agent must be
+able to perceive. In some cases this is a straightforward process. Signals obtained
+from a gyroscope are easily encoded in forms compatible with calculations for
+determining responses. But in other cases extracting information from input data
+is difficult. Examples include understanding speech and images. Likewise, agents
+must be able to formulate their responses in terms compatible with their actuators.
+This might be a straightforward process or it might require an agent to formulate
+responses as complete spoken sentences—meaning that the agent must
+generate speech. In turn, such topics as image processing and analysis, natural
+language understanding, and speech generation are important areas of research.
+The agent attributes that we have identified here represent past as well as current
+areas of research. Of course, they are not totally independent of each other.
+We would like to develop agents that possess all of them, producing agents that
+understand the data received from their environments and develop new response
+patterns through a learning process whose goal is to maximize the agent’s abilities.
+However, by isolating various types of rational behavior and pursuing them
+independently, researchers gain a toehold that can later be combined with progress
+in other areas to produce more intelligent agents.
+We close this subsection by introducing an agent that will provide a context
+for our discussion in Sections 11.2 and 11.3. The agent is designed to solve the
+eight-puzzle, which consists of eight square tiles labeled 1 through 8 mounted in
+a frame capable of holding a total of nine such tiles in three rows and three columns.
+ Among the tiles in the frame is a vacancy into which any of
+the adjacent tiles can be pushed, allowing the tiles in the frame to be scrambled.
+The problem posed is to move the tiles in a scrambled puzzle back to their initial
+positions.
+Our agent takes the form of a box equipped with a gripper, a video camera,
+and a finger with a rubber end so that it does not slip when pushing something
+When the agent is first turned on, its gripper begins to open and
+close as if asking for the puzzle. When we place a scrambled eight-puzzle in the
+gripper, the gripper closes on the puzzle. After a short time the machine’s finger
+lowers and begins pushing the tiles around in the frame until they are back in
+their original positions. At this point the machine releases the puzzle and turns
+itself off.
+This puzzle-solving machine exhibits two of the agent attributes that we have
+identified. First, it must be able to perceive in the sense that it must extract the
+current puzzle state from the image it receives from its camera.
+ Second, it must develop and implement a plan for obtaining a goal.
+The Turing Test
+In the past the Turing test (proposed by Alan Turing in 1950) has served as a
+benchmark in measuring progress in the field of artificial intelligence. Today the
+significance of the Turing test has faded although it remains an important part
+of the artificial intelligence folklore. Turing’s proposal was to allow a human,
+whom we call the interrogator, to communicate with a test subject by means of
+a typewriter system without being told whether the test subject was a human or
+a machine. In this environment, a machine would be declared to behave intelligently
+if the interrogator was not able to distinguish it from a human. Turing
+predicted that by the year 2000 machines would have a 30 percent chance of
+passing a five-minute Turing test—a conjecture that turned out to be surprisingly
+accurate.
+The Origins of Artificial Intelligence
+The quest to build machines that mimic human behavior has a long history, but many
+would agree that the modern field of artificial intelligence had its origins in 1950.
+This was the year that Alan Turing published the article “Computing Machinery and
+Intelligence” in which he proposed that machines could be programmed to exhibit
+intelligent behavior. The name of the field—artificial intelligence—was coined a few
+years later in the now legendary proposal written by John McCarthy who suggested
+that a “study of artificial intelligence be carried out during the summer of 1956 at
+Dartmouth College” to explore “the conjecture that every aspect of learning or any
+other feature of intelligence can in principle be so precisely described that a machine
+can be made to simulate it.”
+One reason that the Turing test is no longer considered to be a meaningful
+measure of intelligence is that an eerie appearance of intelligence can be
+produced with relative ease. A well-known example arose as a result of the program DOCTOR (a version of the more general system called ELIZA) developed
+by Joseph Weizenbaum in the mid-1960s. This interactive program was designed
+to project the image of a Rogerian analyst conducting a psychological interview;
+the computer played the role of the analyst while the user played the patient.
+Internally, all that DOCTOR did was restructure the statements made by the
+patient according to some well-defined rules and direct them back to the patient.
+For example, in response to the statement “I am tired today,” DOCTOR might
+have replied with “Why do you think you’re tired today?” If DOCTOR was unable
+to recognize the sentence structure, it merely responded with something like “Go
+on” or “That’s very interesting.”
+Weizenbaum’s purpose in developing DOCTOR dealt with the study of natural language
+communication. The subject of psychotherapy merely provided
+an environment in which the program could “communicate.” To Weizenbaum’s
+dismay, however, several psychologists proposed using the program for actual
+psychotherapy. (The Rogerian thesis is that the patient, not the analyst, should
+lead the discussion during the therapeutic session, and thus, they argued,
+a computer could possibly conduct a discussion as well as a therapist could.) Moreover,
+DOCTOR projected the image of comprehension so strongly that many who “communicated”
+with it became subservient to the machine’s question-and- answer
+dialogue. In a sense, DOCTOR passed the Turing test. The result was that ethical,
+as well as technical, issues were raised, and Weizenbaum became an advocate for
+maintaining human dignity in a world of advancing technology.
+More recent examples of Turing test “successes” include Internet viruses that
+carry on “intelligent” dialogs with a human victim in order to trick the human into
+dropping his or her malware guard. Moreover, phenomena similar to Turing tests
+occur in the context of computer games such as chess-playing programs. Although
+these programs select moves merely by applying brute-force techniques ,
+humans competing against the computer
+often experience the sensation that the machine possesses creativity and even a
+personality. Similar sensations occur in robotics where machines have been built
+with physical attributes that project intelligent characteristics. Examples include
+toy robot dogs that project adorable personalities merely by tilting their heads or
+lifting their ears in response to a sound.
