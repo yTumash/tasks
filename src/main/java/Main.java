@@ -27,6 +27,7 @@ public class Main {
         File outputFile = new File("src/main/resources/outputFile.txt");
         FileUtils.touch(inputFile);
         FileUtils.touch(outputFile);
+        
         String contents = FileUtils.readFileToString(inputFile, StandardCharsets.UTF_8.name());
 
         if (inputFile.exists() && !StringUtils.isEmpty(contents)) {
@@ -42,8 +43,8 @@ public class Main {
                 } else {
                     map.put(word, 1);
                 }
-
             }
+            
             Map<String, Integer> sortedMap = sortMap(map);
             for (Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
                 LOGGER.debug(entry.getKey() + " : " + entry.getValue());
@@ -55,12 +56,14 @@ public class Main {
     private static Map<String, Integer> sortMap(Map<String, Integer> map) {
 
         List<Map.Entry<String, Integer>> list = new LinkedList<Map.Entry<String, Integer>>(map.entrySet());
+        
         Collections.sort(list, new Comparator<Map.Entry<String, Integer>>(){
             public int compare(Map.Entry<String, Integer> v1, Map.Entry<String, Integer> v2) {
                 return (v1.getValue()).compareTo(v2.getValue());
             }
         });
         Map<String, Integer> sortedMap = new LinkedHashMap<String, Integer>();
+        
         for (Map.Entry<String, Integer> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());
         }
