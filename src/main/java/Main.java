@@ -17,6 +17,12 @@ public class Main {
 
         Logger LOGGER = LogManager.getLogger(Main.class);
 
+        FileSing.getInstance().addContent("One");
+        FileSing.getInstance().addContent("Two");
+        FileSing.getInstance().addContent("Three");
+
+        FileSing.getInstance().displayContent();
+
         File inputFile = new File("src/main/resources/inputFile.txt");
         File outputFile = new File("src/main/resources/outputFile.txt");
         FileUtils.touch(inputFile);
